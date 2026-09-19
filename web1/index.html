@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A student resume and portfolio for Maya Chen.">
+  <title>Maya Chen | Student Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Maya Chen home">
+        <span class="brand-mark">MC</span>
+        <span>maya chen</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#links">Links</a>
+        <a class="nav-cta" href="mailto:maya.chen@example.com">Say hello <span aria-hidden="true">&#8599;</span></a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero reveal" id="about">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> Student portfolio / <span id="current-year">2026</span></p>
+          <h1>Curious mind.<br><em>Bright ideas.</em></h1>
+          <p class="intro">Hi, I am Maya, a high school student who loves turning big questions into thoughtful projects, useful designs, and stories people remember.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#links">Explore my work <span aria-hidden="true">&#8595;</span></a>
+            <a class="text-link" href="mailto:maya.chen@example.com">maya.chen@example.com</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Illustration of Maya Chen surrounded by colorful shapes">
+          <div class="sun"></div>
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="portrait-card">
+            <div class="portrait-head"></div>
+            <div class="portrait-body"></div>
+            <span class="portrait-label">hello<br>there!</span>
+          </div>
+          <div class="shape shape-star" aria-hidden="true">+</div>
+          <div class="shape shape-spark" aria-hidden="true">*</div>
+          <span class="art-note">make<br>something<br>meaningful</span>
+        </div>
+      </section>
+
+      <section class="marquee" aria-label="Areas of interest">
+        <div class="marquee-track"><span>LEARN</span><b>*</b><span>CREATE</span><b>+</b><span>SHARE</span><b>*</b><span>LEARN</span><b>+</b><span>CREATE</span><b>*</b><span>SHARE</span></div>
+      </section>
+
+      <section class="profile-grid reveal">
+        <div class="section-heading">
+          <p class="eyebrow">01 / The basics</p>
+          <h2>A little<br><em>context.</em></h2>
+        </div>
+        <div class="profile-details">
+          <div class="detail-row"><span class="detail-label">Currently</span><strong>Grade 11 student</strong></div>
+          <div class="detail-row"><span class="detail-label">School</span><strong>Northstar Academy<br><small>Class of 2027</small></strong></div>
+          <div class="detail-row"><span class="detail-label">Based in</span><strong>Portland, Oregon</strong></div>
+          <p class="body-copy">I am at my best when I can connect the dots between people, technology, and the world around us. School has taught me how to ask better questions; my side projects teach me how to follow them.</p>
+        </div>
+      </section>
+
+      <section class="interests-section reveal" id="interests">
+        <div class="section-heading section-heading-light">
+          <p class="eyebrow">02 / What keeps me curious</p>
+          <h2>Things I<br><em>love learning.</em></h2>
+        </div>
+        <div class="interest-cards">
+          <article class="interest-card card-yellow"><span class="card-number">01</span><span class="card-icon">&#8734;</span><h3>Favorite subjects</h3><p>Computer science, English literature, environmental science, and design.</p></article>
+          <article class="interest-card card-pink"><span class="card-number">02</span><span class="card-icon">&#9825;</span><h3>Hobbies</h3><p>Film photography, making playlists, sketching, and reading on rainy afternoons.</p></article>
+          <article class="interest-card card-blue"><span class="card-number">03</span><span class="card-icon">&#10022;</span><h3>Activities</h3><p>Robotics club, school newspaper, debate team, and weekend beach cleanups.</p></article>
+        </div>
+      </section>
+
+      <section class="links-section reveal" id="links">
+        <div class="section-heading">
+          <p class="eyebrow">03 / Find me online</p>
+          <h2>Let us make<br><em>something good.</em></h2>
+        </div>
+        <div class="link-list">
+          <a class="link-item" href="https://github.com/" target="_blank" rel="noreferrer"><span>GitHub</span><span class="link-arrow">&#8599;</span></a>
+          <a class="link-item" href="https://www.linkedin.com/" target="_blank" rel="noreferrer"><span>LinkedIn</span><span class="link-arrow">&#8599;</span></a>
+          <a class="link-item" href="mailto:maya.chen@example.com"><span>Email me</span><span class="link-arrow">&#8599;</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>Maya Chen / Student resume</span><span>Built with curiosity <span class="footer-spark">*</span></span></footer>
+  </div>
+</body>
+</html>
