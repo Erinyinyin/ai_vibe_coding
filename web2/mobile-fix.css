@@ -1,0 +1,11 @@
+@media (max-width: 650px) {
+  .topbar .top-cta {
+    margin-right: 47px;
+  }
+
+  .topbar .menu-toggle {
+    position: absolute;
+    right: 6%;
+    top: 21px;
+  }
+}
