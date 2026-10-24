@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080b17" />
+  <title>VOID RUNNER — Alien Bounty</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <div id="game"></div>
+    <div class="vignette"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Void Runner home">
+        <span class="brand-mark">✳</span>
+        <span>VOID<span class="brand-light">RUNNER</span><small>BOUNTY PROTOCOL</small></span>
+      </a>
+      <div class="top-stats">
+        <div class="stat"><span class="stat-label">SECTOR</span><strong id="wave">01</strong></div>
+        <div class="stat"><span class="stat-label">ELIMINATED</span><strong id="kills">000</strong></div>
+        <div class="stat cash-stat"><span class="stat-label">CREDITS</span><strong><span class="credit-icon">◈</span><span id="credits">000</span></strong></div>
+      </div>
+      <button id="sound-toggle" class="icon-button" aria-label="Toggle sound" title="Toggle sound">♫</button>
+    </header>
+
+    <section class="hud-left" aria-label="Pilot status">
+      <div class="hud-card health-card">
+        <div class="hud-heading"><span>PILOT INTEGRITY</span><span id="health-label">100%</span></div>
+        <div class="health-track"><div id="health-fill"></div></div>
+      </div>
+      <div class="hud-card weapon-card">
+        <span class="weapon-icon">⌁</span>
+        <div><span class="hud-heading">PLASMA CANNON</span><small>MK.<span id="weapon-level">I</span> <i>·</i> <span id="weapon-detail">STANDARD ISSUE</span></small></div>
+      </div>
+    </section>
+
+    <section class="center-message" id="center-message" aria-live="polite">
+      <div class="message-kicker">HOSTILE CONTACT</div>
+      <div id="message-title">THEY'RE HERE</div>
+    </section>
+
+    <div class="aim-hint" id="aim-hint"><span class="crosshair-mini">＋</span> CLICK TO FIRE <b>·</b> WASD TO MOVE</div>
+
+    <aside class="upgrade-panel" id="upgrade-panel">
+      <div class="panel-topline"><span class="panel-kicker">FIELD TERMINAL</span><span class="live-dot"></span></div>
+      <h2>UPGRADE<br /><em>YOUR LOADOUT</em></h2>
+      <p class="panel-copy">Spend recovered alien credits to stay in the fight.</p>
+      <div class="upgrade-list">
+        <button class="upgrade-card" data-upgrade="damage">
+          <span class="upgrade-symbol">✴</span><span class="upgrade-info"><b>OVERCHARGE</b><small>+50% weapon damage</small></span><span class="upgrade-cost"><small>COST</small><b>60 ◈</b></span>
+        </button>
+        <button class="upgrade-card" data-upgrade="fireRate">
+          <span class="upgrade-symbol">⌁</span><span class="upgrade-info"><b>RAPID CYCLE</b><small>Fire 25% faster</small></span><span class="upgrade-cost"><small>COST</small><b>75 ◈</b></span>
+        </button>
+        <button class="upgrade-card" data-upgrade="speed">
+          <span class="upgrade-symbol">»</span><span class="upgrade-info"><b>AFTERBURNER</b><small>Move 20% faster</small></span><span class="upgrade-cost"><small>COST</small><b>50 ◈</b></span>
+        </button>
+        <button class="upgrade-card" data-upgrade="repair">
+          <span class="upgrade-symbol">✚</span><span class="upgrade-info"><b>HULL REPAIR</b><small>Restore 35 integrity</small></span><span class="upgrade-cost"><small>COST</small><b>45 ◈</b></span>
+        </button>
+      </div>
+      <div class="panel-foot"><span>▣</span> UPGRADES APPLY INSTANTLY</div>
+    </aside>
+
+    <div class="toast" id="toast" aria-live="polite"></div>
+    <div class="game-over" id="game-over">
+      <div class="game-over-card">
+        <span class="panel-kicker">SIGNAL LOST</span>
+        <h2>RUN<br /><em>ENDED</em></h2>
+        <p>You held the line for <b id="final-wave">1</b> sectors and eliminated <b id="final-kills">0</b> hostiles.</p>
+        <button id="restart-button" class="primary-button">REDEPLOY <span>↗</span></button>
+      </div>
+    </div>
+
+    <footer class="bottom-bar">
+      <div class="control-legend"><span class="keycap">W</span><span class="keycap">A</span><span class="keycap">S</span><span class="keycap">D</span><span>MOVE</span><i></i><span class="keycap wide">MOUSE</span><span>AIM + FIRE</span></div>
+      <div class="status-line"><span class="live-dot"></span> SYSTEM ONLINE <b>·</b> <span id="hostile-count">0 HOSTILES</span></div>
+    </footer>
+  </main>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
